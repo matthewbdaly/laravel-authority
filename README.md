@@ -1,0 +1,2 @@
+# laravel-authority
+Permissions package

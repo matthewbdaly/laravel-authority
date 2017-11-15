@@ -30,3 +30,10 @@ $factory->define(Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission::class
         'label' => $faker->word,
     ];
 });
+
+$factory->define(Matthewbdaly\LaravelAuthority\Eloquent\Models\Role::class, function (Faker $faker) {
+    return [
+        'name' => $faker->word,
+        'label' => $faker->word,
+    ];
+});

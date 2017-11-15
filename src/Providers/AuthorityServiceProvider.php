@@ -26,6 +26,10 @@ class AuthorityServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('Matthewbdaly\LaravelAuthority\Contracts\Repositories\Permission', function () {
+            $baseRepo = new \Matthewbdaly\LaravelAuthority\Eloquent\Repositories\Permission(new \Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission);
+            $cachingRepo = new \Matthewbdaly\LaravelAuthority\Eloquent\Repositories\Decorators\Permission($baseRepo, $this->app['cache.store']);
+            return $cachingRepo;
+        });
     }
 }

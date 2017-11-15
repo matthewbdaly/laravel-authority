@@ -26,7 +26,7 @@ $factory->define(Tests\Fixtures\User::class, function (Faker $faker) {
 
 $factory->define(Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission::class, function (Faker $faker) {
     return [
-        'name' => $faker->string,
-        'label' => $faker->string,
+        'name' => $faker->word,
+        'label' => $faker->word,
     ];
 });

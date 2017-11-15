@@ -8,6 +8,6 @@ class Role extends Model
 {
     public function permissions()
     {
-        return $this->belongsToMany('Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission');
+        return $this->belongsToMany('Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission', 'role_permissions');
     }
 }

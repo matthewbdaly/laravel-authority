@@ -9,7 +9,7 @@ class RoleTest extends TestCase
 {
     public function testCreateRole()
     {
-        $permission = factory(Role::class)->create([
+        factory(Role::class)->create([
             'name' => 'admin',
             'label' => 'Admin'
         ]);

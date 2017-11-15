@@ -9,7 +9,7 @@ class PermissionTest extends TestCase
 {
     public function testCreatePermission()
     {
-        $permission = factory(Permission::class)->create([
+        factory(Permission::class)->create([
             'name' => 'admin',
             'label' => 'Admin'
         ]);

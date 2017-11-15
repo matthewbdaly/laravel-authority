@@ -24,7 +24,9 @@ $factory->define(Tests\Fixtures\User::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(Matthewbdaly\LaravelChat\Eloquent\Models\Message::class, function (Faker $faker) {
+$factory->define(Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission::class, function (Faker $faker) {
     return [
+        'name' => $faker->string,
+        'label' => $faker->string,
     ];
 });

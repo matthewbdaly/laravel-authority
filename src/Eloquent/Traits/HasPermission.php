@@ -6,6 +6,6 @@ trait HasPermission
 {
     public function permissions()
     {
-        return $this->hasMany('Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission');
+        return $this->belongsToMany('Matthewbdaly\LaravelAuthority\Eloquent\Models\Permission', 'user_permissions');
     }
 }

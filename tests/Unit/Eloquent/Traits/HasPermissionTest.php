@@ -14,13 +14,13 @@ class HasPermissionTest extends TestCase
         $user = factory(User::class)->create();
         $permission = factory(Permission::class)->create();
         $user->permissions->add($permission);
-        $this->assertTrue($user->can($permission->name));
+        $this->assertEquals($user->permissions->first()->name, $permission->name);
     }
 
     public function testDoesNotHavePermission()
     {
         $user = factory(User::class)->create();
         $permission = factory(Permission::class)->create();
-        $this->assertFalse($user->can($permission->name));
+        $this->assertCount(0, $user->permissions);
     }
 } 

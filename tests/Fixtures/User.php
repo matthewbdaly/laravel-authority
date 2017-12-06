@@ -5,6 +5,7 @@ namespace Tests\Fixtures;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Matthewbdaly\LaravelAuthority\Eloquent\Traits\HasPermission;
+use Matthewbdaly\LaravelAuthority\Eloquent\Traits\HasRole;
 
 /**
  * Generic user implementation purely for testing
@@ -14,7 +15,7 @@ use Matthewbdaly\LaravelAuthority\Eloquent\Traits\HasPermission;
  */
 class User extends Authenticatable
 {
-    use Notifiable, HasPermission;
+    use Notifiable, HasPermission, HasRole;
 
     /**
      * The attributes that are mass assignable.
